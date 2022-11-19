@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+    <h1>{{title}}</h1>
+    <form method="post" action="http://localhost:3000/students/edit/{{cont._id}}">
+		Nom:
+		<input type="text" name="nom" placeholder="your firstname" value={{cont.nom}} /><br/>
+        		Prenom:
+		<input type="text" name="prenom" placeholder="your lastname" value={{cont.prenom}} /><br/>
+        		Adresse:
+		<input type="text" name="adresse" placeholder="your adresse" value={{cont.adresse}} /><br/>
+
+		<button type="submit">Edit New Student</button>
+	</form>
+
+{% endblock %}
